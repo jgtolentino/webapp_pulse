@@ -60,17 +60,19 @@ const PrismaAnalysis = () => {
       </a>
       
       <main className="container mx-auto px-4 py-12">
-        <section className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white dark:text-white mb-4">Prisma Analysis & Research Support</h1>
-          <p className="text-lg text-gray-300 dark:text-gray-300">
+        <section className="pt-24 text-center mb-12">
+          <h1 id="prisma" className="scroll-mt-24 text-4xl font-bold text-white dark:text-white mb-4">Prisma Analysis & Research Support</h1>
+          <p className="text-lg text-gray-300 dark:text-gray-300 max-w-3xl mx-auto">
             We support PRISMA-compliant reviews and graduate-level research across healthcare, AI, education, and policy. Whether you're publishing, defending, or validating your methodology, we can help.
           </p>
-          <a
-            href="https://calendly.com/insightpulseai/diagnostic"
-            className="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700"
-          >
-            Book a Research Diagnostic
-          </a>
+          <div className="text-center mt-6">
+            <a
+              href="https://calendly.com/insightpulseai/diagnostic"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700"
+            >
+              Book a Research Diagnostic
+            </a>
+          </div>
         </section>
         
         <section className="mb-12">
