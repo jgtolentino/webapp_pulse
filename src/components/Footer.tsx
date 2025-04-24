@@ -50,6 +50,11 @@ const Footer = () => {
                   Prisma Meta-Analysis
                 </Link>
               </li>
+              <li>
+                <a href="https://genz.insightpulseai.com" className="hover:text-pink-500 transition-colors">
+                  Gen Z Marketing Services
+                </a>
+              </li>
             </ul>
           </div>
 
