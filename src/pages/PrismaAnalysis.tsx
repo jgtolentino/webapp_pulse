@@ -6,29 +6,33 @@ const PrismaAnalysis = () => {
   // Update meta tags when component mounts
   useEffect(() => {
     // Update document title
-    document.title = "Prisma Analysis & Research Support | InsightPulseAI";
+    document.title = "PRISMA Meta-Analysis by InsightPulseAI";
     
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Professional support for PRISMA-compliant reviews and graduate-level research across healthcare, AI, education, and policy.");
+      metaDescription.setAttribute("content", "AI-powered support for systematic reviews, evidence synthesis, and academic research. Built for scholars and institutions.");
     }
     
     // Update OG meta tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
     const ogDescription = document.querySelector('meta[property="og:description"]');
     const ogUrl = document.querySelector('meta[property="og:url"]');
+    const ogImage = document.querySelector('meta[property="og:image"]');
     
-    if (ogTitle) ogTitle.setAttribute("content", "Prisma Analysis & Research Support | InsightPulseAI");
-    if (ogDescription) ogDescription.setAttribute("content", "We support PRISMA-compliant reviews and graduate-level research across healthcare, AI, education, and policy.");
-    if (ogUrl) ogUrl.setAttribute("content", "https://insightpulseai.com/prisma-analysis");
+    if (ogTitle) ogTitle.setAttribute("content", "PRISMA Meta-Analysis by InsightPulseAI");
+    if (ogDescription) ogDescription.setAttribute("content", "AI-powered support for systematic reviews, evidence synthesis, and academic research. Built for scholars and institutions.");
+    if (ogUrl) ogUrl.setAttribute("content", "https://www.insightpulseai.com/prisma-analysis");
+    if (ogImage) ogImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og-cover.png");
     
     // Update Twitter meta tags
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
     const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    const twitterImage = document.querySelector('meta[name="twitter:image"]');
     
-    if (twitterTitle) twitterTitle.setAttribute("content", "Prisma Analysis & Research Support | InsightPulseAI");
-    if (twitterDescription) twitterDescription.setAttribute("content", "We support PRISMA-compliant reviews and graduate-level research across healthcare, AI, education, and policy.");
+    if (twitterTitle) twitterTitle.setAttribute("content", "PRISMA Meta-Analysis by InsightPulseAI");
+    if (twitterDescription) twitterDescription.setAttribute("content", "AI-powered support for systematic reviews, evidence synthesis, and academic research. Built for scholars and institutions.");
+    if (twitterImage) twitterImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og-cover.png");
     
     // Reset meta tags when component unmounts
     return () => {
@@ -41,9 +45,11 @@ const PrismaAnalysis = () => {
       if (ogTitle) ogTitle.setAttribute("content", "InsightPulseAI – AI Consulting & Development");
       if (ogDescription) ogDescription.setAttribute("content", "Unlock ROI with tailor-fit AI solutions. Book a free diagnostic today.");
       if (ogUrl) ogUrl.setAttribute("content", "https://insightpulseai.com");
+      if (ogImage) ogImage.setAttribute("content", "https://insightpulseai.com/ogcards/og-cover.png");
       
       if (twitterTitle) twitterTitle.setAttribute("content", "InsightPulseAI – AI Consulting & Development");
       if (twitterDescription) twitterDescription.setAttribute("content", "Unlock ROI with tailor-fit AI solutions. Book a free diagnostic today.");
+      if (twitterImage) twitterImage.setAttribute("content", "https://insightpulseai.com/ogcards/og-cover.png");
     };
   }, []);
 
