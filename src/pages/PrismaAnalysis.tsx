@@ -23,7 +23,7 @@ const PrismaAnalysis = () => {
     if (ogTitle) ogTitle.setAttribute("content", "PRISMA Analysis & Research Support | InsightPulseAI");
     if (ogDescription) ogDescription.setAttribute("content", "We support PRISMA-compliant research for academic, AI, and policy work. Transparent, data-backed, and audit-ready.");
     if (ogUrl) ogUrl.setAttribute("content", "https://www.insightpulseai.com/prisma-analysis");
-    if (ogImage) ogImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og.md.png");
+    if (ogImage) ogImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og-cover.png");
     
     // Update Twitter meta tags
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
@@ -32,7 +32,7 @@ const PrismaAnalysis = () => {
     
     if (twitterTitle) twitterTitle.setAttribute("content", "PRISMA Analysis & Research Support | InsightPulseAI");
     if (twitterDescription) twitterDescription.setAttribute("content", "Transparent, audit-ready, and powered by data. Book a free research diagnostic today.");
-    if (twitterImage) twitterImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og.md.png");
+    if (twitterImage) twitterImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og-cover.png");
     
     // Reset meta tags when component unmounts
     return () => {
