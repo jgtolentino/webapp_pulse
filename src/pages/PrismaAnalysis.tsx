@@ -1,19 +1,54 @@
-import React from "react";
-import { Helmet } from "react-helmet";
+import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const PrismaAnalysis = () => {
+  // Update meta tags when component mounts
+  useEffect(() => {
+    // Update document title
+    document.title = "Prisma Analysis & Research Support | InsightPulseAI";
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Professional support for PRISMA-compliant reviews and graduate-level research across healthcare, AI, education, and policy.");
+    }
+    
+    // Update OG meta tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    
+    if (ogTitle) ogTitle.setAttribute("content", "Prisma Analysis & Research Support | InsightPulseAI");
+    if (ogDescription) ogDescription.setAttribute("content", "We support PRISMA-compliant reviews and graduate-level research across healthcare, AI, education, and policy.");
+    if (ogUrl) ogUrl.setAttribute("content", "https://insightpulseai.com/prisma-analysis");
+    
+    // Update Twitter meta tags
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    
+    if (twitterTitle) twitterTitle.setAttribute("content", "Prisma Analysis & Research Support | InsightPulseAI");
+    if (twitterDescription) twitterDescription.setAttribute("content", "We support PRISMA-compliant reviews and graduate-level research across healthcare, AI, education, and policy.");
+    
+    // Reset meta tags when component unmounts
+    return () => {
+      document.title = "InsightPulseAI - AI Consulting & Development Solutions";
+      
+      if (metaDescription) {
+        metaDescription.setAttribute("content", "InsightPulseAI helps organizations unlock ROI with tailor-fit AI solutions. Take our free diagnostic to discover whether to build or buy your AI solution.");
+      }
+      
+      if (ogTitle) ogTitle.setAttribute("content", "InsightPulseAI – AI Consulting & Development");
+      if (ogDescription) ogDescription.setAttribute("content", "Unlock ROI with tailor-fit AI solutions. Book a free diagnostic today.");
+      if (ogUrl) ogUrl.setAttribute("content", "https://insightpulseai.com");
+      
+      if (twitterTitle) twitterTitle.setAttribute("content", "InsightPulseAI – AI Consulting & Development");
+      if (twitterDescription) twitterDescription.setAttribute("content", "Unlock ROI with tailor-fit AI solutions. Book a free diagnostic today.");
+    };
+  }, []);
+
   return (
     <>
-      <Helmet>
-        <title>Prisma Analysis & Research Support | InsightPulseAI</title>
-        <meta 
-          name="description" 
-          content="Professional support for PRISMA-compliant reviews and graduate-level research across healthcare, AI, education, and policy." 
-        />
-      </Helmet>
-      
       <Navbar />
       
       <main className="container mx-auto px-4 py-12">
@@ -38,6 +73,18 @@ const PrismaAnalysis = () => {
           <p className="text-gray-700">
             Using the PRISMA guidelines ensures that your research follows established methodological standards and improves the transparency, completeness, and quality of your systematic review or meta-analysis.
           </p>
+        </section>
+        
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">What We Offer</h2>
+          <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+            <li>Feasibility analysis for meta-research projects</li>
+            <li>Bayesian modeling via PyMC</li>
+            <li>Meta-regressions using R (meta, metafor) and Python (statsmodels)</li>
+            <li>Survival analysis via lifelines</li>
+            <li>Publication bias and forest/funnel plots</li>
+            <li>Fully reproducible reports using Jupyter or RMarkdown</li>
+          </ul>
         </section>
         
         <section className="mb-12">

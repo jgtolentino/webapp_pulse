@@ -45,6 +45,11 @@ const Footer = () => {
                   Insight Frameworks
                 </Link>
               </li>
+              <li>
+                <Link to="/prisma-analysis" className="hover:text-theme-accent1 transition-colors">
+                  Prisma Meta-Analysis
+                </Link>
+              </li>
             </ul>
           </div>
 
