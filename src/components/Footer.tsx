@@ -7,24 +7,24 @@ const Footer = () => {
   return (
     <footer className="bg-theme-darker pt-16 pb-8 text-theme-light/80">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div>
+        <div className="text-center space-y-8 md:text-left md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8">
+          {/* About */}
+          <div className="space-y-2">
             <h3 className="text-white font-medium text-lg mb-4">About</h3>
             <img 
               src={newLogo} 
-              alt="Company Logo" 
-              className="h-[40px] mb-4 object-contain ml-auto mr-auto md:mr-0 md:ml-0" 
+              alt="InsightPulseAI"
+              className="h-[40px] mx-auto md:mx-0 mb-4 object-contain" 
             />
-            <p className="text-theme-light/70 mb-4">
-              Helping organizations unlock ROI
-              <br />
-              with tailor-fit AI solutions.
+            <p className="text-sm text-theme-light/70">
+              Helping organizations unlock ROI with tailor-fit AI solutions.
             </p>
           </div>
 
-          <div>
+          {/* Services */}
+          <div className="space-y-2">
             <h3 className="text-white font-medium text-lg mb-4">Services</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               <li>
                 <Link to="/services" className="hover:text-theme-accent1 transition-colors">
                   Custom AI Development
@@ -58,9 +58,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          {/* Company */}
+          <div className="space-y-2">
             <h3 className="text-white font-medium text-lg mb-4">Company</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               <li>
                 <Link to="/about" className="hover:text-theme-accent1 transition-colors">
                   About Us
@@ -84,47 +85,44 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          {/* Contact */}
+          <div className="space-y-2">
             <h3 className="text-white font-medium text-lg mb-4">Contact</h3>
-            <div className="flex items-center mb-2 gap-2">
+            <p className="flex items-center justify-center md:justify-start gap-2">
               <Mail className="w-4 h-4 text-theme-accent1" />
-              <span><a href="mailto:info@insightpulseai.com" className="hover:text-theme-accent1">info@insightpulseai.com</a></span>
-            </div>
-            <div className="flex items-center mb-2 gap-2">
+              <a href="mailto:info@insightpulseai.com" className="hover:text-theme-accent1">info@insightpulseai.com</a>
+            </p>
+            <p className="flex items-center justify-center md:justify-start gap-2">
               <Phone className="w-4 h-4 text-theme-accent1" />
-              <span><a href="tel:+639682699265" className="hover:text-theme-accent1">+63 968 269 9265</a></span>
-            </div>
-            <div className="flex items-center mb-2 gap-2">
+              <a href="tel:+639682699265" className="hover:text-theme-accent1">+63 968 269 9265</a>
+            </p>
+            <p className="flex items-center justify-center md:justify-start gap-2">
               <MapPin className="w-4 h-4 text-theme-accent2" />
-              <span>Pasig City, 1609, Philippines</span>
-            </div>
-            <div className="flex items-center mb-2 gap-2">
+              <span>Pasig City 1609, Philippines</span>
+            </p>
+            <p className="flex items-center justify-center md:justify-start gap-2">
               <Globe className="w-4 h-4 text-theme-blue" />
-              <span>
-                <a
-                  href="https://www.insightpulseai.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-theme-accent1"
-                >
-                  insightpulseai.com
-                </a>
-              </span>
-            </div>
-            <div className="flex items-center mb-2 gap-2">
+              <a
+                href="https://www.insightpulseai.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-theme-accent1"
+              >
+                insightpulseai.com
+              </a>
+            </p>
+            <p className="flex items-center justify-center md:justify-start gap-2">
               <Linkedin className="w-4 h-4 text-theme-accent1" />
-              <span>
-                <a
-                  href="https://www.linkedin.com/company/insightpulseai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-theme-accent2"
-                >
-                  LinkedIn
-                </a>
-              </span>
-            </div>
-            <div className="mt-2 text-xs text-theme-light/60">Timezone: UTC+8 (Philippine Standard Time)</div>
+              <a
+                href="https://www.linkedin.com/company/insightpulseai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-theme-accent2"
+              >
+                LinkedIn
+              </a>
+            </p>
+            <p className="text-xs text-theme-light/60 mt-2">Timezone: UTC+8 (Philippine Standard Time)</p>
           </div>
         </div>
 
