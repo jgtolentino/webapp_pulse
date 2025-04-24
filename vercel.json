@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/prisma-analysis", "destination": "/prisma-analysis.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
