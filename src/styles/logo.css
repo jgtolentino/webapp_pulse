@@ -1,0 +1,14 @@
+
+img[src*="logo.svg"] {
+  max-height: 2.25rem; /* Tailwind h-9 equivalent */
+  transition: opacity 0.2s ease;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  img[src*="logo.svg"] {
+    max-height: 2rem;
+  }
+}
