@@ -6,12 +6,12 @@ const PrismaAnalysis = () => {
   // Update meta tags when component mounts
   useEffect(() => {
     // Update document title
-    document.title = "PRISMA Meta-Analysis by InsightPulseAI";
+    document.title = "PRISMA Analysis & Research Support | InsightPulseAI";
     
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "AI-powered support for systematic reviews, evidence synthesis, and academic research. Built for scholars and institutions.");
+      metaDescription.setAttribute("content", "We support PRISMA-compliant research for academic, AI, and policy work. Transparent, data-backed, and audit-ready.");
     }
     
     // Update OG meta tags
@@ -20,19 +20,19 @@ const PrismaAnalysis = () => {
     const ogUrl = document.querySelector('meta[property="og:url"]');
     const ogImage = document.querySelector('meta[property="og:image"]');
     
-    if (ogTitle) ogTitle.setAttribute("content", "PRISMA Meta-Analysis by InsightPulseAI");
-    if (ogDescription) ogDescription.setAttribute("content", "AI-powered support for systematic reviews, evidence synthesis, and academic research. Built for scholars and institutions.");
+    if (ogTitle) ogTitle.setAttribute("content", "PRISMA Analysis & Research Support | InsightPulseAI");
+    if (ogDescription) ogDescription.setAttribute("content", "We support PRISMA-compliant research for academic, AI, and policy work. Transparent, data-backed, and audit-ready.");
     if (ogUrl) ogUrl.setAttribute("content", "https://www.insightpulseai.com/prisma-analysis");
-    if (ogImage) ogImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og-cover.png");
+    if (ogImage) ogImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og.md.png");
     
     // Update Twitter meta tags
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
     const twitterDescription = document.querySelector('meta[name="twitter:description"]');
     const twitterImage = document.querySelector('meta[name="twitter:image"]');
     
-    if (twitterTitle) twitterTitle.setAttribute("content", "PRISMA Meta-Analysis by InsightPulseAI");
-    if (twitterDescription) twitterDescription.setAttribute("content", "AI-powered support for systematic reviews, evidence synthesis, and academic research. Built for scholars and institutions.");
-    if (twitterImage) twitterImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og-cover.png");
+    if (twitterTitle) twitterTitle.setAttribute("content", "PRISMA Analysis & Research Support | InsightPulseAI");
+    if (twitterDescription) twitterDescription.setAttribute("content", "Transparent, audit-ready, and powered by data. Book a free research diagnostic today.");
+    if (twitterImage) twitterImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og.md.png");
     
     // Reset meta tags when component unmounts
     return () => {
