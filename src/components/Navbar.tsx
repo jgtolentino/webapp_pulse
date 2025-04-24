@@ -88,6 +88,9 @@ const NavLinks = () => {
       <Link to="/diagnostic" className="text-white hover:text-theme-accent1 transition-colors">
         Free Diagnostic
       </Link>
+      <Link to="/prisma-analysis" className="text-white hover:text-theme-accent1 transition-colors">
+        Research
+      </Link>
       <Link to="/why-us" className="text-white hover:text-theme-accent1 transition-colors">
         Why Us
       </Link>
@@ -117,6 +120,13 @@ const MobileNavLinks = ({ toggleMenu }: { toggleMenu: () => void }) => {
         onClick={toggleMenu}
       >
         Free Diagnostic
+      </Link>
+      <Link
+        to="/prisma-analysis"
+        className="text-white hover:text-theme-accent1 transition-colors py-2"
+        onClick={toggleMenu}
+      >
+        Research
       </Link>
       <Link
         to="/why-us"
