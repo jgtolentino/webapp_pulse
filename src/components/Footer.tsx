@@ -46,7 +46,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/prisma-analysis" className="hover:text-theme-accent1 transition-colors">
+                <Link to="/research" className="hover:text-theme-accent1 transition-colors">
                   Prisma Meta-Analysis
                 </Link>
               </li>

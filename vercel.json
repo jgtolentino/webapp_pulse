@@ -1,6 +1,14 @@
 {
   "rewrites": [
-    { "source": "/prisma-analysis", "destination": "/prisma-analysis.html" },
+    { "source": "/research", "destination": "/research.html" },
+    { "source": "/prisma-analysis", "destination": "/research" },
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    {
+      "source": "/prisma-analysis",
+      "destination": "/research",
+      "permanent": true
+    }
   ]
 }

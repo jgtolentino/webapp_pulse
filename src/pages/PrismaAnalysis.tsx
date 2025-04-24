@@ -20,19 +20,19 @@ const PrismaAnalysis = () => {
     const ogUrl = document.querySelector('meta[property="og:url"]');
     const ogImage = document.querySelector('meta[property="og:image"]');
     
-    if (ogTitle) ogTitle.setAttribute("content", "PRISMA Analysis & Research Support | InsightPulseAI");
-    if (ogDescription) ogDescription.setAttribute("content", "We support PRISMA-compliant research for academic, AI, and policy work. Transparent, data-backed, and audit-ready.");
-    if (ogUrl) ogUrl.setAttribute("content", "https://www.insightpulseai.com/prisma-analysis");
-    if (ogImage) ogImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og-cover.png");
+    if (ogTitle) ogTitle.setAttribute("content", "Research Support | InsightPulseAI");
+    if (ogDescription) ogDescription.setAttribute("content", "PRISMA-based meta-analysis and expert research backing. Transparent, audit-ready, and built for your workflow.");
+    if (ogUrl) ogUrl.setAttribute("content", "https://www.insightpulseai.com/research");
+    if (ogImage) ogImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og.md.ico");
     
     // Update Twitter meta tags
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
     const twitterDescription = document.querySelector('meta[name="twitter:description"]');
     const twitterImage = document.querySelector('meta[name="twitter:image"]');
     
-    if (twitterTitle) twitterTitle.setAttribute("content", "PRISMA Analysis & Research Support | InsightPulseAI");
-    if (twitterDescription) twitterDescription.setAttribute("content", "Transparent, audit-ready, and powered by data. Book a free research diagnostic today.");
-    if (twitterImage) twitterImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og-cover.png");
+    if (twitterTitle) twitterTitle.setAttribute("content", "Research Support | InsightPulseAI");
+    if (twitterDescription) twitterDescription.setAttribute("content", "From systematic reviews to meta-regressions — expert support backed by AI.");
+    if (twitterImage) twitterImage.setAttribute("content", "https://www.insightpulseai.com/ogcards/og.md.ico");
     
     // Reset meta tags when component unmounts
     return () => {
