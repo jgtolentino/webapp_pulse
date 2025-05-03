@@ -29,12 +29,12 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Link to="/login">
+          <Link to="/quote-request">
             <Button
               variant="outline"
-              className="border-transparent text-white hover:bg-theme-accent1/10 hover:text-theme-accent1"
+              className="border-theme-accent1/30 text-theme-accent1 hover:bg-theme-accent1/10"
             >
-              Login
+              Get a Quote
             </Button>
           </Link>
           <Link to="/signup">
@@ -58,12 +58,12 @@ const Navbar = () => {
           <div className="container mx-auto px-4 flex flex-col space-y-4">
             <MobileNavLinks toggleMenu={toggleMenu} />
             <div className="flex flex-col space-y-2 pt-4 border-t border-theme-darkgray/20">
-              <Link to="/login" onClick={toggleMenu}>
+              <Link to="/quote-request" onClick={toggleMenu}>
                 <Button
                   variant="outline"
-                  className="w-full border-transparent text-white hover:bg-theme-accent1/10 hover:text-theme-accent1"
+                  className="w-full border-theme-accent1/30 text-theme-accent1 hover:bg-theme-accent1/10"
                 >
-                  Login
+                  Get a Quote
                 </Button>
               </Link>
               <Link to="/signup" onClick={toggleMenu}>

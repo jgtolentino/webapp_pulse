@@ -8,7 +8,13 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import SignupSuccess from "./pages/SignupSuccess";
+import QuoteRequest from "./pages/QuoteRequest";
+import QuoteSuccess from "./pages/QuoteSuccess";
 import Diagnostic from "./pages/Diagnostic";
+import DiagnosticSuccess from "./pages/DiagnosticSuccess";
+import AppointmentBooking from "./pages/AppointmentBooking";
+import AppointmentSuccess from "./pages/AppointmentSuccess";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import PrismaAnalysis from "./pages/PrismaAnalysis";
@@ -25,7 +31,13 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/signup-success" element={<SignupSuccess />} />
+          <Route path="/quote-request" element={<QuoteRequest />} />
+          <Route path="/quote-success" element={<QuoteSuccess />} />
           <Route path="/diagnostic" element={<Diagnostic />} />
+          <Route path="/diagnostic-success" element={<DiagnosticSuccess />} />
+          <Route path="/appointment" element={<AppointmentBooking />} />
+          <Route path="/appointment-success" element={<AppointmentSuccess />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/prisma-analysis" element={<PrismaAnalysis />} />

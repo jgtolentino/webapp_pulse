@@ -39,9 +39,21 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
               <div>
                 <h1 className="mb-6">Get in Touch</h1>
-                <p className="text-xl mb-8 text-theme-light/80">
+                <p className="text-xl mb-6 text-theme-light/80">
                   Ready to transform your business with AI? Contact us for a free consultation.
                 </p>
+                
+                <div className="mb-8">
+                  <Button 
+                    onClick={() => window.location.href = '/appointment'} 
+                    className="bg-theme-accent1 text-theme-darker hover:bg-theme-accent1/90 px-6 py-3 text-lg mb-4 w-full md:w-auto"
+                  >
+                    Book a Strategy Call →
+                  </Button>
+                  <p className="text-theme-light/60 text-sm">
+                    Schedule a 30-minute consultation with our AI experts
+                  </p>
+                </div>
                 
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start">

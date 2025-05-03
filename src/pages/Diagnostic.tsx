@@ -2,13 +2,20 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { saveUTMParams, trackConversionWithUTM } from "@/utils/utmTracker";
 
 const Diagnostic = () => {
+  const navigate = useNavigate();
   const [step, setStep] = useState(0);
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<null | DiagnosticResult>(null);
+  
+  // Capture UTM parameters on page load
+  useEffect(() => {
+    saveUTMParams();
+  }, []);
   
   const startDiagnostic = () => {
     setStep(1);
@@ -31,7 +38,17 @@ const Diagnostic = () => {
           "Implement a data quality and governance framework"
         ]
       });
+      
+      // Track completion as conversion
+      if (window.lintrk) {
+        window.lintrk('track', { conversion_id: 'diagnostic-started' });
+      }
+      
+      // Option 1: Show results on the current page
       setStep(4);
+      
+      // Option 2: Navigate to dedicated success page (uncomment to use)
+      // navigate('/diagnostic-success');
     }, 2000);
   };
   
@@ -359,15 +376,22 @@ const DiagnosticResults = ({ results }: { results: DiagnosticResult }) => {
         </ul>
       </div>
       
-      <div className="text-center">
+      <div className="text-center space-y-6">
         <p className="mb-6 text-theme-light/80">
           Want to discuss your results with an AI expert?
         </p>
-        <Link to="/contact">
-          <Button className="bg-theme-accent1 text-theme-darker hover:bg-theme-accent1/90 px-6 py-2">
-            Book a Free Strategy Call
-          </Button>
-        </Link>
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Link to="/diagnostic-success">
+            <Button className="bg-theme-blue text-white hover:bg-theme-blue/90 px-6 py-2">
+              Save or Download Results
+            </Button>
+          </Link>
+          <Link to="/contact">
+            <Button className="bg-theme-accent1 text-theme-darker hover:bg-theme-accent1/90 px-6 py-2">
+              Book a Free Strategy Call
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

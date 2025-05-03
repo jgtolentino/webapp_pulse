@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 
@@ -13,6 +13,7 @@ interface AuthFormProps {
 }
 
 const AuthForm = ({ mode }: AuthFormProps) => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -30,7 +31,13 @@ const AuthForm = ({ mode }: AuthFormProps) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      setMessage(`${mode === "login" ? "Login" : "Signup"} simulation complete! Please connect Supabase.`);
+      
+      // If this is a signup form, redirect to the success page
+      if (mode === "signup") {
+        navigate("/signup-success");
+      } else {
+        setMessage("Login simulation complete! Please connect Supabase.");
+      }
     }, 1500);
   };
 

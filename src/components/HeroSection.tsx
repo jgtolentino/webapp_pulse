@@ -34,8 +34,8 @@ const HeroSection = () => {
                 Take the Free Diagnostic
               </Button>
             </Link>
-            <Link to="/contact">
-              <Button variant="outline" className="border-theme-light/30 text-theme-light hover:bg-white/10 px-8 py-6 text-lg w-full sm:w-auto">
+            <Link to="/appointment">
+              <Button variant="outline" className="border-theme-accent1/30 text-theme-accent1 hover:bg-theme-accent1/10 px-8 py-6 text-lg w-full sm:w-auto">
                 Book a Strategy Call
               </Button>
             </Link>

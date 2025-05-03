@@ -95,11 +95,11 @@ const Pricing = () => {
             
             <div className="mt-16 text-center">
               <p className="text-theme-light/70 mb-4">
-                Need a custom solution? Contact our sales team for a tailored quote.
+                Need a custom solution? Request a tailored quote for your specific requirements.
               </p>
-              <Link to="/contact">
-                <Button variant="outline" className="border-theme-light/30 text-theme-light hover:bg-white/10">
-                  Contact Sales
+              <Link to="/quote-request">
+                <Button className="bg-theme-accent1 text-theme-darker hover:bg-theme-accent1/90">
+                  Get a Custom Quote
                 </Button>
               </Link>
             </div>
@@ -154,7 +154,7 @@ const PricingCard = ({ title, description, price, annual, features, cta, highlig
       </ul>
       
       <div className="mt-auto">
-        <Link to={cta === "Contact Sales" ? "/contact" : "/signup"}>
+        <Link to={cta === "Contact Sales" ? "/quote-request" : "/signup"}>
           <Button 
             className={`w-full ${
               highlighted 

@@ -18,9 +18,9 @@ const CTASection = () => {
                 Start Free Diagnostic
               </Button>
             </Link>
-            <Link to="/contact">
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg w-full sm:w-auto">
-                Schedule a Consultation
+            <Link to="/appointment">
+              <Button variant="outline" className="border-theme-accent1/50 text-white hover:bg-white/10 px-8 py-6 text-lg w-full sm:w-auto">
+                Book a Strategy Call
               </Button>
             </Link>
           </div>
