@@ -162,7 +162,7 @@ export default function AutoSDR() {
             <Button 
               variant="outline" 
               className="border-teal-500 text-teal-400 hover:bg-teal-950 px-8 py-6 text-lg h-auto"
-              onClick={() => window.open("https://calendly.com/insightpulseai/arkie-demo", "_blank")}
+              onClick={() => window.open("https://calendly.com/jgtolentino-rn", "_blank")}
             >
               Schedule Call
             </Button>
