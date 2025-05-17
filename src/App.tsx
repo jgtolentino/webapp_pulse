@@ -18,6 +18,7 @@ import AppointmentSuccess from "./pages/AppointmentSuccess";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import PrismaAnalysis from "./pages/PrismaAnalysis";
+import AutoSDR from "./pages/AutoSDR";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/prisma-analysis" element={<PrismaAnalysis />} />
           <Route path="/research" element={<PrismaAnalysis />} />
+          <Route path="/autosdr" element={<AutoSDR />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
