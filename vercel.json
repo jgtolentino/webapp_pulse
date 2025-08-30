@@ -1,14 +1,16 @@
 {
   "rewrites": [
-    { "source": "/research", "destination": "/research.html" },
-    { "source": "/prisma-analysis", "destination": "/research" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
-  "redirects": [
+  "headers": [
     {
-      "source": "/prisma-analysis",
-      "destination": "/research",
-      "permanent": true
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
     }
-  ]
+  ],
+  "redirects": [{ "source": "/home", "destination": "/", "permanent": true }]
 }
